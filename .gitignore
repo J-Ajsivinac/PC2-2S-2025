@@ -1,0 +1,20 @@
+# Carpetas de compilación
+bin/
+obj/
+
+# Archivos temporales de usuario
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Carpeta oculta de Visual Studio
+.vs/
+
+# Archivos de depuración
+*.pdb
+
+# Archivos generados automáticamente
+*.cache
+*.log
+*.sln.ide
