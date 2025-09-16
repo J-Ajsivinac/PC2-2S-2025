@@ -46,6 +46,7 @@ Partial Class Form1
         Label15 = New Label()
         Label16 = New Label()
         Panel3 = New Panel()
+        btn_verForm2 = New Button()
         btnReiniciar = New Button()
         btnIncrementar = New Button()
         Label11 = New Label()
@@ -280,6 +281,7 @@ Partial Class Form1
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(btn_verForm2)
         Panel3.Controls.Add(btnReiniciar)
         Panel3.Controls.Add(btnIncrementar)
         Panel3.Controls.Add(Label11)
@@ -288,11 +290,20 @@ Partial Class Form1
         Panel3.Size = New Size(527, 169)
         Panel3.TabIndex = 16
         ' 
+        ' btn_verForm2
+        ' 
+        btn_verForm2.Location = New Point(345, 74)
+        btn_verForm2.Name = "btn_verForm2"
+        btn_verForm2.Size = New Size(148, 45)
+        btn_verForm2.TabIndex = 3
+        btn_verForm2.Text = "Ver Form2"
+        btn_verForm2.UseVisualStyleBackColor = True
+        ' 
         ' btnReiniciar
         ' 
-        btnReiniciar.Location = New Point(219, 74)
+        btnReiniciar.Location = New Point(189, 74)
         btnReiniciar.Name = "btnReiniciar"
-        btnReiniciar.Size = New Size(188, 45)
+        btnReiniciar.Size = New Size(150, 45)
         btnReiniciar.TabIndex = 2
         btnReiniciar.Text = "Reiniciar Datos"
         btnReiniciar.UseVisualStyleBackColor = True
@@ -301,7 +312,7 @@ Partial Class Form1
         ' 
         btnIncrementar.Location = New Point(25, 74)
         btnIncrementar.Name = "btnIncrementar"
-        btnIncrementar.Size = New Size(188, 45)
+        btnIncrementar.Size = New Size(162, 45)
         btnIncrementar.TabIndex = 1
         btnIncrementar.Text = "Incrementar Contador"
         btnIncrementar.UseVisualStyleBackColor = True
@@ -353,7 +364,7 @@ Partial Class Form1
         ' 
         ' btnVerificarPrimo
         ' 
-        btnVerificarPrimo.Location = New Point(572, 540)
+        btnVerificarPrimo.Location = New Point(548, 540)
         btnVerificarPrimo.Name = "btnVerificarPrimo"
         btnVerificarPrimo.Size = New Size(94, 29)
         btnVerificarPrimo.TabIndex = 20
@@ -363,7 +374,7 @@ Partial Class Form1
         ' lblEsPrimo
         ' 
         lblEsPrimo.AutoSize = True
-        lblEsPrimo.Location = New Point(710, 544)
+        lblEsPrimo.Location = New Point(648, 544)
         lblEsPrimo.Name = "lblEsPrimo"
         lblEsPrimo.Size = New Size(81, 20)
         lblEsPrimo.TabIndex = 21
@@ -428,5 +439,6 @@ Partial Class Form1
     Friend WithEvents Label13 As Label
     Friend WithEvents btnVerificarPrimo As Button
     Friend WithEvents lblEsPrimo As Label
+    Friend WithEvents btn_verForm2 As Button
 
 End Class

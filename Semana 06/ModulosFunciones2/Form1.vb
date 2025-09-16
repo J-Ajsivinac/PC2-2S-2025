@@ -38,8 +38,16 @@
         Dim resultado As Integer
         ' Convert.ToInt32 convierte el texto del TextBox a un número entero
         ' Si el texto no es un número válido, lanzará una excepción
-        num1 = Convert.ToInt32(txtNum1.Text)
-        num2 = Convert.ToInt32(txtNum2.Text)
+
+
+        Try
+            num1 = Convert.ToInt32(txtNum1.Text)
+            num2 = Convert.ToInt32(txtNum2.Text)
+            ' System.FormatException -> Capturar errores de formato
+        Catch ex As Exception
+            MessageBox.Show("Por favor, ingrese números válidos en los campos Num1 y Num2.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return ' Sale del procedimiento si hay un error
+        End Try
 
         resultado = SumarNumeros(num1, num2) ' Llama a la función SumarNumeros del módulo global)
         lblSumaResultado.Text = "Resultado: " & resultado.ToString()
@@ -64,5 +72,36 @@
         End If
 
         ActualizarEtiquetas()
+    End Sub
+
+    Private Sub btn_verForm2_Click(sender As Object, e As EventArgs) Handles btn_verForm2.Click
+        Dim form2 As New Form2() ' Crea una nueva instancia del formulario Form2
+        form2.Show() ' Muestra el formulario Form2
+        ' Me -> hace referencia al formulario actual
+        Me.Hide() ' Oculta el formulario actual (Form1)
+    End Sub
+
+    Private Sub btnCalcularArea_Click(sender As Object, e As EventArgs) Handles btnCalcularArea.Click
+        Dim radio As Double
+        Dim area As Double
+
+        Try
+            ' Convertir a Double en lugar de Integer para permitir decimales
+            radio = Convert.ToDouble(txtRadio.Text)
+            ' System.FormatException -> Capturar errores de formato
+        Catch ex As Exception
+            MessageBox.Show("Por favor, ingrese números válidos en el campo del Radio.", "Error de formato", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return ' Sale del procedimiento si hay un error
+        End Try
+        area = CalcularAreaCirculo(radio) ' Llama a la función CalcularAreaCirculo del módulo global
+        lblAreaResultado.Text = "Área: " & area.ToString()
+    End Sub
+
+    Private Sub btnProcesarTexto_Click(sender As Object, e As EventArgs) Handles btnProcesarTexto.Click
+        Dim textoOriginal As String = txtTextoEntrada.Text
+        Dim textoConvertido As String = ConvertirATitulo(textoOriginal) ' Llama a la función ConvertirATitulo del módulo global
+        Dim textoInvertido As String = InvertirText(textoOriginal) ' Llama a la función InvertirText del módulo global
+        Dim nombreFormateado As String = FormatearNombre(textoOriginal, textoOriginal) ' Llama a la función FormatearNombre del módulo global
+        txtResultadoTexto.Text = nombreFormateado
     End Sub
 End Class

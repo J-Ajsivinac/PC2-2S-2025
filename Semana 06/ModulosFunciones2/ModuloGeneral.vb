@@ -23,6 +23,7 @@ Module ModuloGeneral
     ' A = i * r^2
     Public Function CalcularAreaCirculo(ByVal radio As Double) As Double
         ' Calcula el área de un círculo dado su radio
+        ' Math.Pow  Eleva un número a una potencia
         ' Return Math.PI * Math.Pow(radio, 2)
         Const PI As Double = 3.1415926535897931
         Return PI * radio * radio
@@ -79,6 +80,8 @@ Module ModuloGeneral
         ' o -> text(1)
         ' l -> text(2)
         ' a -> text(3)
+        ' No se puede hacer text(4) porque no existe
+        ' text.Length = 4
         ' text.Length - 1 = 3
         ' Lo que va a hacer el for es recorrer el texto desde el último caracter hasta el primero
         ' text(i) va a tomar el caracter en la posición i del texto
@@ -112,4 +115,10 @@ Module ModuloGeneral
         ' ConfiguracionSecreta no se puede cambiar desde fuera del módulo (Private)
     End Sub
 
+    Public Function FormatearNombre(nombre As String, apellido As String) As String
+        ' Uso de funciones de cadena incorporadas
+        Dim nombreFormateado As String
+        nombreFormateado = nombre.Trim().ToUpper() + ", " + apellido.Trim().ToLower()
+        Return nombreFormateado
+    End Function
 End Module
