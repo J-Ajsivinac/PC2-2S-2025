@@ -48,7 +48,7 @@ Partial Class VentanaUsuario
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(784, 450)
+        ClientSize = New Size(784, 432)
         Controls.Add(btnLogout)
         Controls.Add(lblName)
         Name = "VentanaUsuario"
