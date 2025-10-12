@@ -46,4 +46,10 @@
             Me.Hide()
         End If
     End Sub
+
+    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
+        Dim form As New Register()
+        form.Show()
+        Me.Hide()
+    End Sub
 End Class

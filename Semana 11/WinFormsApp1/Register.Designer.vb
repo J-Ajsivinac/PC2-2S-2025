@@ -22,9 +22,40 @@ Partial Class Register
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Register"
+        btnRegistrar = New Button()
+        btnLogin = New Button()
+        SuspendLayout()
+        ' 
+        ' btnRegistrar
+        ' 
+        btnRegistrar.Location = New Point(33, 36)
+        btnRegistrar.Name = "btnRegistrar"
+        btnRegistrar.Size = New Size(152, 29)
+        btnRegistrar.TabIndex = 0
+        btnRegistrar.Text = "Registrar"
+        btnRegistrar.UseVisualStyleBackColor = True
+        ' 
+        ' btnLogin
+        ' 
+        btnLogin.Location = New Point(33, 90)
+        btnLogin.Name = "btnLogin"
+        btnLogin.Size = New Size(152, 29)
+        btnLogin.TabIndex = 1
+        btnLogin.Text = "Login"
+        btnLogin.UseVisualStyleBackColor = True
+        ' 
+        ' Register
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(220, 153)
+        Controls.Add(btnLogin)
+        Controls.Add(btnRegistrar)
+        Name = "Register"
+        Text = "Register"
+        ResumeLayout(False)
     End Sub
+
+    Friend WithEvents btnRegistrar As Button
+    Friend WithEvents btnLogin As Button
 End Class

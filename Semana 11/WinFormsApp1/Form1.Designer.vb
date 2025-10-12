@@ -29,6 +29,7 @@ Partial Class Form1
         Label1 = New Label()
         Label2 = New Label()
         Label3 = New Label()
+        btnRegistrar = New Button()
         SuspendLayout()
         ' 
         ' Button1
@@ -90,11 +91,21 @@ Partial Class Form1
         Label3.TabIndex = 6
         Label3.Text = "LOGIN"
         ' 
+        ' btnRegistrar
+        ' 
+        btnRegistrar.Location = New Point(386, 298)
+        btnRegistrar.Name = "btnRegistrar"
+        btnRegistrar.Size = New Size(94, 29)
+        btnRegistrar.TabIndex = 7
+        btnRegistrar.Text = "Registrar"
+        btnRegistrar.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(637, 353)
+        Controls.Add(btnRegistrar)
         Controls.Add(Label3)
         Controls.Add(Label2)
         Controls.Add(Label1)
@@ -115,5 +126,6 @@ Partial Class Form1
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnRegistrar As Button
 
 End Class
