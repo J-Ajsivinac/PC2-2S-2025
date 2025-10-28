@@ -108,6 +108,11 @@ Public Class BaseModel
     '          - Cada diccionario = una fila de la base de datos
     '          - Cada clave del diccionario = nombre de columna
     '          - Cada valor = dato de esa columna
+    '         Ejemplo de retorno:
+    '         [ 
+    '           {"id": 1, "nombre": "Juan", "edad": 25},
+    '           {"id": 2, "nombre": "Ana", "edad": 30}
+    '         ]
     '
     ' EJEMPLO DE USO:
     '   Dim usuarios = BaseModel.Instance.ExecuteQuery(

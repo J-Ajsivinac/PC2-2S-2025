@@ -11,7 +11,7 @@
     End Sub
 
     Private Sub btnCrear_Click(sender As Object, e As EventArgs) Handles btnCrear.Click
-        Dim response As String = Producto.Crear("Laptop 2", "Laptop de alta gama", 999.99, Sesion.UsuarioId)
+        Dim response As String = Producto.Crear("Laptop 4", "Laptop de gama media", 129.99, Sesion.UsuarioId)
         MessageBox.Show(response)
     End Sub
 
@@ -24,7 +24,7 @@
         End If
         Dim idProducto As Integer = Convert.ToInt32(idText)
 
-        Dim response As String = Producto.Actualizar(idProducto, "Nuevo 2", "new 2", 222.2)
+        Dim response As String = Producto.Actualizar(idProducto, "Nuevo valor", "new value", 11.99)
         MessageBox.Show(response)
     End Sub
 
@@ -45,8 +45,8 @@
             MessageBox.Show("Error: ID de producto inválido.")
             Return
         End If
-        Dim idProducto As Integer = Convert.ToInt32(idText)
         Try
+            Dim idProducto As Integer = Convert.ToInt32(idText)
             Dim prod = Producto.ObtenerPorId(idProducto)
             If prod Is Nothing OrElse prod.Count = 0 Then
                 MessageBox.Show("No se encontró el producto con el ID proporcionado.")

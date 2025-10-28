@@ -107,9 +107,9 @@ Partial Class VentanaUsuario
         ' 
         ' btnView
         ' 
-        btnView.Location = New Point(476, 394)
+        btnView.Location = New Point(452, 394)
         btnView.Name = "btnView"
-        btnView.Size = New Size(94, 29)
+        btnView.Size = New Size(118, 44)
         btnView.TabIndex = 8
         btnView.Text = "Ver Todos"
         btnView.UseVisualStyleBackColor = True
@@ -127,7 +127,7 @@ Partial Class VentanaUsuario
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(605, 435)
+        ClientSize = New Size(605, 450)
         Controls.Add(Label1)
         Controls.Add(btnView)
         Controls.Add(txtID)

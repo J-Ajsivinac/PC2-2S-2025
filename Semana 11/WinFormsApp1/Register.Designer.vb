@@ -30,16 +30,16 @@ Partial Class Register
         ' 
         btnRegistrar.Location = New Point(33, 36)
         btnRegistrar.Name = "btnRegistrar"
-        btnRegistrar.Size = New Size(152, 29)
+        btnRegistrar.Size = New Size(314, 42)
         btnRegistrar.TabIndex = 0
         btnRegistrar.Text = "Registrar"
         btnRegistrar.UseVisualStyleBackColor = True
         ' 
         ' btnLogin
         ' 
-        btnLogin.Location = New Point(33, 90)
+        btnLogin.Location = New Point(33, 144)
         btnLogin.Name = "btnLogin"
-        btnLogin.Size = New Size(152, 29)
+        btnLogin.Size = New Size(314, 29)
         btnLogin.TabIndex = 1
         btnLogin.Text = "Login"
         btnLogin.UseVisualStyleBackColor = True
@@ -48,7 +48,7 @@ Partial Class Register
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(220, 153)
+        ClientSize = New Size(384, 194)
         Controls.Add(btnLogin)
         Controls.Add(btnRegistrar)
         Name = "Register"

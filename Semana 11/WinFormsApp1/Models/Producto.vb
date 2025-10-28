@@ -71,15 +71,16 @@ Module Producto
     ' Actualizar un producto
     Public Function Actualizar(id As Integer, nombre As String, descripcion As String, precio As Decimal) As String
         If id <= 0 OrElse String.IsNullOrEmpty(nombre) OrElse precio <= 0 Then
-            Return "Error: ID válido, nombre y precio positivo son requeridos."
+            Return "Error: ID inválido, nombre y precio positivo son requeridos."
         End If
 
-        Dim query As String = "UPDATE Productos SET Nombre = @Nombre, Descripcion = @Descripcion, Precio = @Precio WHERE Id = @Id"
+        Dim query As String = "UPDATE Productos SET Nombre = @Nombre, Descripcion = @Descripcion, Precio = @Precio WHERE Id = @Id AND IdUsuario = @IdUsuario"
         Dim params As New Dictionary(Of String, Object) From {
             {"@Nombre", nombre},
             {"@Descripcion", descripcion},
             {"@Precio", precio},
-            {"@Id", id}
+            {"@Id", id},
+            {"IdUsuario", Sesion.UsuarioId}
         }
 
         Try
@@ -103,9 +104,10 @@ Module Producto
             Return "Error: ID inválido."
         End If
 
-        Dim query As String = "DELETE FROM Productos WHERE Id = @Id"
+        Dim query As String = "DELETE FROM Productos WHERE Id = @Id AND IdUsuario = @IdUsuario"
         Dim params As New Dictionary(Of String, Object) From {
-            {"@Id", id}
+            {"@Id", id},
+            {"@IdUsuario", Sesion.UsuarioId}
         }
 
         Try
